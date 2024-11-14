@@ -1,0 +1,186 @@
+<form [formGroup]="driverForm" (ngSubmit)="onSubmit()">
+  <h1>Demande de Devis - GAT Assurance</h1>
+  <p class="mb-5">Remplissez les champs suivants pour obtenir un devis d'assurance pour votre véhicule.</p>
+  
+  <!-- Section 1: Informations Personnelles -->
+  <div class="mt-5">
+    <h3 class="mb-4">Informations Personnelles </h3>
+    
+
+    <!-- Nom Complet -->
+     
+    <label for="name" class="form-label mt-4">Quel est votre nom complet ?</label>
+    <div class="input-group">
+      <input
+        type="text"
+        id="name"
+        formControlName="name"
+        class="form-control"
+        [ngClass]="{
+          'is-invalid': form['name'].touched && form['name'].invalid,
+          'is-valid': form['name'].touched && !form['name'].invalid
+        }" />
+      <div class="invalid-feedback">
+        <div>Veuillez saisir votre nom.</div>
+      </div>
+    </div>
+
+    <!-- Âge -->
+    <label for="age" class="form-label mt-3">Quel est votre âge ?</label>
+    <div class="input-group">
+      <input
+        type="number"
+        id="age"
+        formControlName="age"
+        class="form-control"
+        [ngClass]="{
+          'is-invalid': form['age'].touched && form['age'].invalid,
+          'is-valid': form['age'].touched && !form['age'].invalid
+        }" />
+      <span class="input-group-text">ans</span>
+      <div class="invalid-feedback">
+        <div>Veuillez saisir un âge valide.</div>
+      </div>
+    </div>
+
+    <!-- Expérience -->
+    <label for="experience" class="form-label mt-3">Combien d'années d'expérience de conduite avez-vous ?</label>
+    <div class="input-group">
+      <input
+        type="number"
+        id="experience"
+        formControlName="experience"
+        class="form-control"
+        [ngClass]="{
+          'is-invalid': form['experience'].touched && form['experience'].invalid,
+          'is-valid': form['experience'].touched && !form['experience'].invalid
+        }" />
+      <span class="input-group-text">ans</span>
+      <div class="invalid-feedback">
+        <div>Veuillez saisir un nombre d'années valide.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 2: Informations sur le Véhicule -->
+  <div class="mt-5">
+    <h3 class="mb-4">Informations sur le Véhicule</h3>
+
+    <!-- Âge du Véhicule -->
+    <label for="vehicleAge" class="form-label mt-4">Quel est l'âge du véhicule ?</label>
+    <div class="input-group">
+      <input
+        type="number"
+        id="vehicleAge"
+        formControlName="vehicleAge"
+        class="form-control"
+        [ngClass]="{
+          'is-invalid': form['vehicleAge'].touched && form['vehicleAge'].invalid,
+          'is-valid': form['vehicleAge'].touched && !form['vehicleAge'].invalid
+        }" />
+      <span class="input-group-text">ans</span>
+      <div class="invalid-feedback">
+        <div>Veuillez saisir un âge valide.</div>
+      </div>
+    </div>
+
+    <!-- Prix d'Achat du Véhicule -->
+    <label for="vehiclePurchasePrice" class="form-label mt-3">Quel était le prix d'achat initial en Dinars Tunisiens ?</label>
+    <div class="input-group">
+      <span class="input-group-text">TND</span>
+      <input
+        type="number"
+        id="vehiclePurchasePrice"
+        formControlName="vehiclePurchasePrice"
+        class="form-control"
+        [ngClass]="{
+          'is-invalid': form['vehiclePurchasePrice'].touched && form['vehiclePurchasePrice'].invalid,
+          'is-valid': form['vehiclePurchasePrice'].touched && !form['vehiclePurchasePrice'].invalid
+        }" />
+      <div class="invalid-feedback">
+        <div>Veuillez saisir un montant valide en TND.</div>
+      </div>
+    </div>
+
+    <!-- Kilométrage Annuel -->
+    <label for="vehicleAnnualMileage" class="form-label mt-3">Quel est le kilométrage annuel ?</label>
+    <div class="input-group">
+      <input
+        type="number"
+        id="vehicleAnnualMileage"
+        formControlName="vehicleAnnualMileage"
+        class="form-control"
+        [ngClass]="{
+          'is-invalid': form['vehicleAnnualMileage'].touched && form['vehicleAnnualMileage'].invalid,
+          'is-valid': form['vehicleAnnualMileage'].touched && !form['vehicleAnnualMileage'].invalid
+        }" />
+      <span class="input-group-text">km</span>
+      <div class="invalid-feedback">
+        <div>Veuillez saisir un kilométrage valide.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 3: Historique de Conduite -->
+  <div class="mt-5">
+    <h3 class="mb-4">Historique de Conduite</h3>
+
+    <!-- Nombre d'Assurances -->
+    <label for="insuranceCount" class="form-label mt-4">Combien de fois ce véhicule a-t-il été assuré ?</label>
+    <div class="input-group">
+      <input
+        type="number"
+        id="insuranceCount"
+        formControlName="insuranceCount"
+        class="form-control"
+        [ngClass]="{
+          'is-invalid': form['insuranceCount'].touched && form['insuranceCount'].invalid,
+          'is-valid': form['insuranceCount'].touched && !form['insuranceCount'].invalid
+        }" />
+      <div class="invalid-feedback">
+        <div>Veuillez saisir un nombre valide.</div>
+      </div>
+    </div>
+
+    <!-- Infractions -->
+    <label for="faults" class="form-label mt-3">Au cours des 5 dernières années, combien d'infractions de conduite avez-vous eues ?</label>
+    <div class="input-group">
+      <input
+        type="number"
+        id="faults"
+        formControlName="faults"
+        class="form-control"
+        [ngClass]="{
+          'is-invalid': form['faults'].touched && form['faults'].invalid,
+          'is-valid': form['faults'].touched && !form['faults'].invalid
+        }" />
+      <div class="invalid-feedback">
+        <div>Veuillez saisir un nombre valide.</div>
+      </div>
+    </div>
+
+    <!-- Déclarations de Sinistres -->
+    <label for="insuranceClaims" class="form-label mt-3"
+      >Au cours des 5 dernières années, combien de déclarations de sinistres avez-vous effectuées ?</label
+    >
+    <div class="input-group">
+      <input
+        type="number"
+        id="insuranceClaims"
+        formControlName="insuranceClaims"
+        class="form-control"
+        [ngClass]="{
+          'is-invalid': form['insuranceClaims'].touched && form['insuranceClaims'].invalid,
+          'is-valid': form['insuranceClaims'].touched && !form['insuranceClaims'].invalid
+        }" />
+      <div class="invalid-feedback">
+        <div>Veuillez saisir un nombre valide.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bouton de soumission -->
+  <div class="col-12 mt-5 mb-5">
+    <button class="btn btn-primary btn-lg" type="submit">Soumettre la Demande</button>
+  </div>
+</form>

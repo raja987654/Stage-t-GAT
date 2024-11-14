@@ -1,0 +1,101 @@
+/* Style général pour l'ensemble de la page */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  /* Styles de titre et de sous-titres */
+  h1 {
+    text-align: center;
+    color: #8B008B; /* Mauve foncé */
+    font-weight: bold;
+  }
+  
+  h3 {
+    color: #8B008B; /* Mauve foncé */
+    margin-top: 2rem;
+  }
+  
+  /* Section des options de contact */
+  .contact-options {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  p.mb-2, p.mb-3 {
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  /* Styles pour les boutons */
+  .btn-primary {
+    background-color: #FF0000; /* Rouge */
+    border-color: #FF0000;
+    color: #fff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #B20000; /* Rouge foncé */
+    border-color: #B20000;
+  }
+  
+  .btn-outline-primary {
+    color: #FFD700; /* Jaune */
+    border: 1px solid #FFD700;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #FFD700;
+    color: #8B008B; /* Texte mauve */
+    border-color: #FFD700;
+  }
+  
+  /* Formulaire de contact */
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-control {
+    padding: 0.75rem;
+    border: 1px solid #8B008B; /* Bordure mauve */
+    border-radius: 5px;
+  }
+  
+  textarea.form-control {
+    resize: vertical;
+  }
+  
+  .form-check-label {
+    font-size: 0.9em;
+    color: #8B008B; /* Mauve */
+  }
+  
+  /* Section des réseaux sociaux */
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .social-links a {
+    text-decoration: none;
+    color: #FF0000; /* Rouge */
+    padding: 8px 16px;
+    border: 1px solid #FF0000;
+    border-radius: 4px;
+    transition: all 0.3s;
+  }
+  
+  .social-links a:hover {
+    background-color: #FF0000;
+    color: #fff;
+  }
+  
+  /* Modifications pour les petits écrans */
+  @media (max-width: 768px) {
+    .btn-lg {
+      width: 100%;
+    }
+  }
+  

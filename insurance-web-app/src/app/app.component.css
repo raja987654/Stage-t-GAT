@@ -1,0 +1,28 @@
+.navbar {
+  padding: 20px;
+}
+
+.nav-link {
+  max-width: fit-content;
+}
+
+@media only screen and (min-width: 992px) {
+  .nav-link {
+    margin-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .nav-pills {
+    margin-top: 15px;
+  }
+
+  .nav-link {
+    margin: 5px 0 0 auto;
+    padding: 10px 0;
+  }
+
+  .nav-link.active {
+    padding: 10px 20px;
+  }
+}

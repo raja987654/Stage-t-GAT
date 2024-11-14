@@ -1,0 +1,92 @@
+<h1>Contactez-nous</h1>
+<p class="mb-2">Veuillez choisir l'une des options suivantes pour nous contacter :</p>
+
+<div class="contact-options">
+  <!-- Section Bureau -->
+  <h3 class="mt-5">Nos bureaux</h3>
+  <p class="mb-3">
+    Siège social : 92-94 Avenue Hédi Chaker, 1002 Tunis<br>
+    Téléphone : (+216) 71 843 900<br>
+    Fax : (+216) 71 784 427
+  </p>
+
+  <!-- Section Email -->
+  <h3 class="mt-5">Envoyez un email</h3>
+  <p class="mb-3">
+    Pour toute question ou demande de renseignements, vous pouvez nous envoyer un email en utilisant le bouton ci-dessous.
+    Notre équipe vous répondra dans un délai de 48 heures.
+  </p>
+  <a class="btn btn-primary btn-lg" href="mailto:rajouaraja@gmail.com">Envoyer un email</a>
+
+  <!-- Section Feedback -->
+  <h3 class="mt-5">Formulaire de contact</h3>
+  <p>Si vous avez des suggestions, des commentaires ou des problèmes à signaler, veuillez utiliser le formulaire ci-dessous.</p>
+
+  <form>
+    <div class="form-group mb-2">
+      <label for="name">Votre nom</label>
+      <input type="text" class="form-control" id="name" placeholder="Entrez votre nom complet" required />
+    </div>
+
+    <div class="form-group mb-2">
+      <label for="email">Adresse email</label>
+      <input type="email" class="form-control" id="email" placeholder="exemple@email.com" required />
+    </div>
+
+    <div class="form-group mb-2">
+      <label for="subject">Sujet</label>
+      <select class="form-control" id="subject" required>
+        <option value="">Sélectionnez un sujet</option>
+        <option value="devis">Demande de devis</option>
+        <option value="reclamation">Réclamation</option>
+        <option value="information">Demande d'information</option>
+        <option value="autre">Autre</option>
+      </select>
+    </div>
+
+    <div class="form-group mb-2">
+      <label for="message">Message</label>
+      <textarea class="form-control" id="message" rows="5" placeholder="Écrivez votre message ici" required></textarea>
+    </div>
+
+    <div class="form-check mb-3">
+      <input class="form-check-input" type="checkbox" id="consent" required>
+      <label class="form-check-label" for="consent">
+        J'accepte que mes données personnelles soient traitées conformément à la politique de confidentialité de GAT Assurances
+      </label>
+    </div>
+
+    <button type="button" class="btn btn-primary btn-lg mt-2 mb-5" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+      Envoyer le message
+    </button>
+  </form>
+
+  <!-- Section Réseaux Sociaux -->
+  <h3 class="mt-5">Suivez-nous</h3>
+  <div class="social-links mb-5">
+    <a href="https://www.facebook.com/GATAssurances" class="btn btn-outline-primary me-2">
+      <i class="bi bi-facebook"></i> Facebook
+    </a>
+    <a href="https://www.linkedin.com/company/gat-assurances" class="btn btn-outline-primary me-2">
+      <i class="bi bi-linkedin"></i> LinkedIn
+    </a>
+  </div>
+</div>
+
+<!-- Modal de confirmation -->
+<div class="modal fade" id="feedbackModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="feedbackModalLabel">Message envoyé</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+      </div>
+      <div class="modal-body">
+        Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
